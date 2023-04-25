@@ -27,26 +27,33 @@ public class JFLivro extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jlNomeEditora = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jlTitulo = new javax.swing.JLabel();
-        jlNomeEditora = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
+        jlNomeEditora1 = new javax.swing.JLabel();
         jtNomeEditora = new javax.swing.JTextField();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
         jMenu2 = new javax.swing.JMenu();
 
+        jlNomeEditora.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlNomeEditora.setText("Nome Editora:");
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Livro");
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(204, 255, 255));
 
         jlTitulo.setFont(new java.awt.Font("Arial Black", 1, 18)); // NOI18N
+        jlTitulo.setForeground(new java.awt.Color(0, 0, 0));
         jlTitulo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTitulo.setText("GERENCIA LIVRO");
+        jlTitulo.setText("GERENCIA LIVROS");
         jlTitulo.setToolTipText("");
 
-        jlNomeEditora.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jlNomeEditora.setText("Nome Livro:");
+        jlNomeEditora1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        jlNomeEditora1.setForeground(new java.awt.Color(0, 0, 0));
+        jlNomeEditora1.setText("Nome do Livro : ");
 
         jtNomeEditora.setToolTipText("Informe o nome completo");
         jtNomeEditora.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -69,28 +76,29 @@ public class JFLivro extends javax.swing.JFrame {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(139, Short.MAX_VALUE)
+                .addComponent(jlTitulo)
+                .addGap(132, 132, 132))
+            .addComponent(jSeparator1)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(106, 106, 106)
-                        .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 242, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 118, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jlNomeEditora, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtNomeEditora)))
+                .addContainerGap()
+                .addComponent(jlNomeEditora1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jtNomeEditora)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jlTitulo, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jlNomeEditora, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jtNomeEditora, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 394, Short.MAX_VALUE))
+                    .addComponent(jlNomeEditora1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jtNomeEditora, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 383, Short.MAX_VALUE))
         );
 
         jMenuBar1.setBackground(new java.awt.Color(0, 0, 0));
@@ -119,20 +127,20 @@ public class JFLivro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jtNomeEditoraFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtNomeEditoraFocusLost
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtNomeEditoraFocusLost
+
+    private void jtNomeEditoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtNomeEditoraActionPerformed
+
+    }//GEN-LAST:event_jtNomeEditoraActionPerformed
+
     private void jtNomeEditoraKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtNomeEditoraKeyTyped
         String Letras = "\"0123456789<>:?/~^}][{´`=+-_!|'\\'@#$%¨&*()²³£¢¬§º°ª\";";
         if (Letras.contains(evt.getKeyChar() + "")) {
             evt.consume();
         }
     }//GEN-LAST:event_jtNomeEditoraKeyTyped
-
-    private void jtNomeEditoraActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtNomeEditoraActionPerformed
-
-    }//GEN-LAST:event_jtNomeEditoraActionPerformed
-
-    private void jtNomeEditoraFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtNomeEditoraFocusLost
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jtNomeEditoraFocusLost
 
     /**
      * @param args the command line arguments
@@ -174,7 +182,9 @@ public class JFLivro extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel jlNomeEditora;
+    private javax.swing.JLabel jlNomeEditora1;
     private javax.swing.JLabel jlTitulo;
     private javax.swing.JTextField jtNomeEditora;
     // End of variables declaration//GEN-END:variables

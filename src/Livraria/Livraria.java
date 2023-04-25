@@ -16,7 +16,10 @@ import Services.EditoraServicos;
 import Services.FactoryServicos;
 import Services.LivroServicos;
 import Services.PedidoServicos;
+import java.awt.Menu;
+import javax.swing.JMenu;
 import util.Validadores;
+import view.menu;
 
 public class Livraria { // Incio CLASS
     public static CCliente CadCliente = new CCliente();
@@ -25,7 +28,7 @@ public class Livraria { // Incio CLASS
     public static CVendaLivro CadVendaLivro = new CVendaLivro();
     public static Scanner ler = new Scanner(System.in);
     public static String tpCad = null;
-
+    
     public static int lerNum() {// Incio LEIA
         Scanner ler = new Scanner(System.in);
         try {
@@ -93,6 +96,7 @@ public class Livraria { // Incio CLASS
     public static void cadastrarCliente() {// Inicio CADCLIENTE
         String nomeCliente;
         String cpf;
+        String cnpj;
         String endereco;
         String telefone;
         ClienteServicos ClienteS = FactoryServicos.getClienteServicos();
@@ -532,7 +536,9 @@ public class Livraria { // Incio CLASS
 
     // Inicio MAIN
     public static void main(String[] args) {// Inicio VOID
-        CadCliente.mockClientes();
+        Menu jMenu = new Menu();
+        menu.setvisible(true);
+        /*CadCliente.mockClientes();
         CadEditora.mockEditora();
         CadLivro.mockLivros();
         CadVendaLivro.mockVendaLivros();
@@ -617,6 +623,5 @@ public class Livraria { // Incio CLASS
                     break;
             }
         } while (opM != 0);// Sistema
-    }// Fim VOID
-} // Fim MAIN
-  // Fim CLASS
+   */}
+}

@@ -9,8 +9,13 @@ import javax.swing.JOptionPane;
 
 public class menu extends javax.swing.JFrame {
 
+    public static void setvisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public menu() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }   
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
